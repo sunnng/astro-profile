@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.0.8",
     "astro": "^3.1.4",
     "remixicon": "^3.5.0"
   }

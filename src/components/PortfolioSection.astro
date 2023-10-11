@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Portfolio1 from "../assets/imgs/portfolio1.jpg";
 import Portfolio2 from "../assets/imgs/portfolio2.jpg";
 import Portfolio3 from "../assets/imgs/portfolio3.jpg";
@@ -18,7 +19,7 @@ import Portfolio3 from "../assets/imgs/portfolio3.jpg";
   <div class="d-grid portfolio__wrapper container">
     <!-- =========== project 1 =========== -->
     <div class="portfolio__project">
-      <img src={Portfolio1.src} alt="" class="portfolio__img" />
+      <Image src={Portfolio1} alt="portfolio-1" class="portfolio__img" />
 
       <div class="portfolio__content">
         <div class="portfolio__info">
@@ -34,7 +35,7 @@ import Portfolio3 from "../assets/imgs/portfolio3.jpg";
 
     <!-- =========== project 2 =========== -->
     <div class="portfolio__project">
-      <img src={Portfolio2.src} alt="" class="portfolio__img" />
+      <Image src={Portfolio2} alt="portfolio-1" class="portfolio__img" />
 
       <div class="portfolio__content">
         <div class="portfolio__info">
@@ -50,7 +51,7 @@ import Portfolio3 from "../assets/imgs/portfolio3.jpg";
 
     <!-- =========== project 3 =========== -->
     <div class="portfolio__project">
-      <img src={Portfolio3.src} alt="" class="portfolio__img" />
+      <Image src={Portfolio3} alt="portfolio-1" class="portfolio__img" />
 
       <div class="portfolio__content">
         <div class="portfolio__info">
@@ -78,6 +79,7 @@ import Portfolio3 from "../assets/imgs/portfolio3.jpg";
 
   .portfolio__img {
     transition: var(--transition);
+    height: auto;
   }
 
   .portfolio__content {

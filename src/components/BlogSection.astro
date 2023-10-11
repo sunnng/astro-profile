@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import BlogImg1 from "../assets/imgs/blog1.jpg";
 import BlogImg2 from "../assets/imgs/blog2.jpg";
 import BlogImg3 from "../assets/imgs/blog3.jpg";
@@ -19,7 +20,7 @@ import BlogImg3 from "../assets/imgs/blog3.jpg";
     <!-- =============== blog 1 =============== -->
     <div class="blog__card">
       <div class="blog__img-wrapper">
-        <img src={BlogImg1.src} alt="" class="blog__img" />
+        <Image src={BlogImg1} alt="blog1" class="blog__img" />
       </div>
 
       <div class="blog__content">
@@ -39,7 +40,7 @@ import BlogImg3 from "../assets/imgs/blog3.jpg";
     <!-- =============== blog 2 =============== -->
     <div class="blog__card">
       <div class="blog__img-wrapper">
-        <img src={BlogImg2.src} alt="" class="blog__img" />
+        <Image src={BlogImg2} alt="blog2" class="blog__img" />
       </div>
 
       <div class="blog__content">
@@ -59,7 +60,7 @@ import BlogImg3 from "../assets/imgs/blog3.jpg";
     <!-- =============== blog 3 =============== -->
     <div class="blog__card">
       <div class="blog__img-wrapper">
-        <img src={BlogImg3.src} alt="" class="blog__img" />
+        <Image src={BlogImg3} alt="blog3" class="blog__img" />
       </div>
 
       <div class="blog__content">
@@ -95,6 +96,7 @@ import BlogImg3 from "../assets/imgs/blog3.jpg";
 
   .blog__img {
     transition: var(--transition);
+    height: auto;
   }
 
   .blog__content,

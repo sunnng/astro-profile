@@ -1,4 +1,5 @@
 ---
+import "@fontsource/poppins";
 import "remixicon/fonts/remixicon.css";
 import Header from "../components/Header.astro";
 import FooterSection from "../components/FooterSection.astro";
@@ -15,11 +16,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/svg+xml" href="/astro-profile/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -32,9 +29,9 @@ const { title } = Astro.props;
     </a>
   </body>
 
-  <script is:inline src="/swiper-bundle.min.js"></script>
-  <script is:inline src="/scrollreveal.min.js"></script>
-  <link rel="stylesheet" href="/swiper-bundle.min.css" />
+  <script is:inline src="/astro-profile/swiper-bundle.min.js"></script>
+  <script is:inline src="/astro-profile/scrollreveal.min.js"></script>
+  <link rel="stylesheet" href="/astro-profile/swiper-bundle.min.css" />
 </html>
 
 <script>
@@ -83,7 +80,7 @@ const { title } = Astro.props;
     /*
   Typography
   --------------------------------*/
-    --font-family: "Satoshi", sans-serif;
+    --font-family: "Poppins", sans-serif;
     /* font sizes */
     --fs-xs: 1.2rem;
     --fs-sm: 1.4rem;

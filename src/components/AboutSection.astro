@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import AboutImg from "../assets/imgs/about.jpg";
 ---
 
@@ -18,7 +19,7 @@ import AboutImg from "../assets/imgs/about.jpg";
       <a href="#" class="btn btn--primary">My Resume</a>
     </div>
 
-    <img src={AboutImg.src} alt="" class="about__img" />
+    <Image src={AboutImg} alt="about me" class="about__img" />
   </div>
 </section>
 
@@ -42,5 +43,6 @@ import AboutImg from "../assets/imgs/about.jpg";
 
   .about__img {
     border-radius: var(--b-radius);
+    height: auto;
   }
 </style>
