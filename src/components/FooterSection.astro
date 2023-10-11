@@ -1,0 +1,128 @@
+<footer class="footer section">
+  <div class="footer__wrapper container">
+    <div class="footer__content">
+      <span class="footer__subtitle">Get In Touch</span>
+      <h2 class="footer__title">Let's Talk About Work</h2>
+      <p class="footer__description">
+        Justo ornare faucibus tempor orci pretium. Vitae varius amet urna sed
+        dui sapien eget id tempus. Nibh sed sit faucibus suscipit.
+      </p>
+      <a href="#" class="btn--line">Contact Me</a>
+    </div>
+
+    <div class="footer__contact">
+      <div class="footer__social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="ri-linkedin-line"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="ri-github-line"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="ri-dribbble-line"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="ri-youtube-line"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" class="footer__contact-item">arthur@contact.email</a>
+      <a href="#" class="footer__contact-item">(+928) 458 - 235</a>
+    </div>
+  </div>
+
+  <p class="footer__copyright container">
+    copy; Copyright Taurus Code 2023. All Rights Reserved
+  </p>
+</footer>
+
+<style>
+  .social__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid var(--color-text);
+    border-radius: 50%;
+    font-size: var(--fs-lg);
+    transition: var(--transition);
+  }
+
+  .social__link:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: transparent;
+  }
+
+  .footer {
+    background-color: var(--color-dark);
+    padding: 8rem 0 3rem;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer__content {
+    max-width: 60rem;
+  }
+
+  .footer__subtitle,
+  .footer__title,
+  .footer__description {
+    color: var(--color-white);
+  }
+
+  .footer__subtitle {
+    display: block;
+    font-size: var(--fs-sm);
+    margin-bottom: 1rem;
+  }
+
+  .footer__title {
+    font-size: var(--fs-3xl);
+    margin-bottom: 3rem;
+  }
+
+  .footer__description {
+    margin-bottom: 3rem;
+  }
+
+  .footer__social .social__list {
+    flex-direction: initial;
+    margin-bottom: 3rem;
+  }
+
+  .footer__contact-item {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: var(--fs-lg);
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+  }
+
+  .footer__copyright {
+    font-size: var(--fs-sm);
+    text-align: center;
+    margin-top: 5rem;
+  }
+</style>

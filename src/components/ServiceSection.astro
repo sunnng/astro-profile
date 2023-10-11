@@ -1,0 +1,131 @@
+<section id="services" class="section service">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">My Expertise</h2>
+      <p class="section__description">
+        Enim adipiscing duis facilisi sed eu tortor. Suspendisse vulputate
+        varius eu sollicitudin amet placerat feugiat sem felis.
+      </p>
+    </div>
+  </div>
+
+  <div class="d-grid service__wrapper container">
+    <!-- section 1 -->
+    <div class="service__item">
+      <div class="service__card">
+        <div class="service__icon">
+          <i class="ri-code-s-slash-line"></i>
+        </div>
+
+        <h3 class="service__name">Web Development</h3>
+
+        <p class="service__description">
+          Morbi condimentum vulputate faucibus interdum faucibus. Aliquet
+          vestibulum vulputate.
+        </p>
+
+        <a href="#" class="service__link">Read More</a>
+      </div>
+    </div>
+
+    <!-- section 2 -->
+    <div class="service__item">
+      <div class="service__card">
+        <div class="service__icon">
+          <i class="ri-pen-nib-fill"></i>
+        </div>
+
+        <h3 class="service__name">UI/UX Design</h3>
+
+        <p class="service__description">
+          Morbi condimentum vulputate faucibus interdum faucibus. Aliquet
+          vestibulum vulputate.
+        </p>
+
+        <a href="#" class="service__link">Read More</a>
+      </div>
+    </div>
+
+    <!-- section 3 -->
+    <div class="service__item">
+      <div class="service__card">
+        <div class="service__icon">
+          <i class="ri-device-line"></i>
+        </div>
+
+        <h3 class="service__name">App Development</h3>
+
+        <p class="service__description">
+          Morbi condimentum vulputate faucibus interdum faucibus. Aliquet
+          vestibulum vulputate.
+        </p>
+
+        <a href="#" class="service__link">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service__item {
+    width: 100%;
+    max-width: 30rem;
+    justify-self: center;
+  }
+
+  .service__card {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-card);
+    padding: 3rem 1.8rem 3rem 2.5rem;
+    transition: var(--transition);
+  }
+
+  .service__icon {
+    font-size: var(--fs-3xl);
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+  }
+
+  .service__name {
+    font-size: var(--fs-lg);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+  }
+
+  .service__description {
+    margin-bottom: 3rem;
+  }
+
+  .service__link {
+    position: relative;
+    color: var(--color-primary);
+  }
+
+  .service__link::before {
+    position: absolute;
+    content: "";
+    bottom: -3.2rem;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    transition: var(--transition);
+  }
+
+  .service__link:hover::before {
+    bottom: -1rem;
+  }
+
+  .service__card:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-1rem);
+  }
+
+  .service__card:hover
+    :is(.service__icon, .service__name, .service__description, .service__link) {
+    color: var(--color-white);
+  }
+
+  .service__card:hover .service__link::before {
+    background-color: var(--color-white);
+  }
+</style>

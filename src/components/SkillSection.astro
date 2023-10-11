@@ -1,0 +1,101 @@
+---
+import SkillImg1 from "../assets/imgs/skill1.svg";
+import SkillImg2 from "../assets/imgs/skill2.svg";
+import SkillImg3 from "../assets/imgs/skill3.svg";
+---
+
+<section id="skills" class="skill section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">My Skills</h2>
+      <p class="section__description">
+        Enim adipiscing duis facilisi sed eu tortor. Suspendisse vulputate
+        varius eu sollicitudin amet placerat feugiat sem felis.
+      </p>
+    </div>
+  </div>
+
+  <div class="d-grid skill__wrapper container">
+    <div class="section-bg"></div>
+
+    <!-- skill item 1 -->
+    <div class="skill__item">
+      <div class="skill__card">
+        <img src={SkillImg1.src} alt="" class="skill__img" />
+        <h3 class="skill__name">Front-End</h3>
+        <ul class="skill__list">
+          <li class="skill__item">HTML</li>
+          <li class="skill__item">CSS</li>
+          <li class="skill__item">Sass</li>
+          <li class="skill__item">JavaScript</li>
+          <li class="skill__item">TypeScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- skill item 2 -->
+    <div class="skill__item">
+      <div class="skill__card">
+        <img src={SkillImg2.src} alt="" class="skill__img" />
+        <h3 class="skill__name">Back-End</h3>
+        <ul class="skill__list">
+          <li class="skill__item">PHP</li>
+          <li class="skill__item">Python</li>
+          <li class="skill__item">Java</li>
+          <li class="skill__item">MySQL</li>
+          <li class="skill__item">MongoDB</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- skill item 3 -->
+    <div class="skill__item">
+      <div class="skill__card">
+        <img src={SkillImg3.src} alt="" class="skill__img" />
+        <h3 class="skill__name">Frameworks</h3>
+        <ul class="skill__list">
+          <li class="skill__item">Django</li>
+          <li class="skill__item">Vue</li>
+          <li class="skill__item">React</li>
+          <li class="skill__item">Tailwind</li>
+          <li class="skill__item">Express.js</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skill__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem;
+    border-radius: var(--b-radius-lg);
+    background-color: var(--color-white);
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .skill__img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 3rem;
+  }
+
+  .skill__name {
+    font-size: var(--fs-lg);
+    margin-bottom: 2rem;
+  }
+
+  .skill__item {
+    margin-bottom: 1.5rem;
+  }
+
+  .skill__card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-card);
+  }
+</style>

@@ -1,0 +1,130 @@
+---
+import Portfolio1 from "../assets/imgs/portfolio1.jpg";
+import Portfolio2 from "../assets/imgs/portfolio2.jpg";
+import Portfolio3 from "../assets/imgs/portfolio3.jpg";
+---
+
+<section id="portfolio" class="section portfolio">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">My Experience</h2>
+      <p class="section__description">
+        Enim adipiscing duis facilisi sed eu tortor. Suspendisse vulputate
+        varius eu sollicitudin amet placerat feugiat sem felis.
+      </p>
+    </div>
+  </div>
+
+  <div class="d-grid portfolio__wrapper container">
+    <!-- =========== project 1 =========== -->
+    <div class="portfolio__project">
+      <img src={Portfolio1.src} alt="" class="portfolio__img" />
+
+      <div class="portfolio__content">
+        <div class="portfolio__info">
+          <h3 class="portfolio__name">App Development</h3>
+          <span class="portfolio__category">App Development</span>
+        </div>
+
+        <a href="#" class="portfolio__link">
+          <i class="ri-external-link-line"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- =========== project 2 =========== -->
+    <div class="portfolio__project">
+      <img src={Portfolio2.src} alt="" class="portfolio__img" />
+
+      <div class="portfolio__content">
+        <div class="portfolio__info">
+          <h3 class="portfolio__name">Web Development</h3>
+          <span class="portfolio__category">Web Development</span>
+        </div>
+
+        <a href="#" class="portfolio__link">
+          <i class="ri-external-link-line"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- =========== project 3 =========== -->
+    <div class="portfolio__project">
+      <img src={Portfolio3.src} alt="" class="portfolio__img" />
+
+      <div class="portfolio__content">
+        <div class="portfolio__info">
+          <h3 class="portfolio__name">UI/UX Design</h3>
+          <span class="portfolio__category">UI/UX Design</span>
+        </div>
+
+        <a href="#" class="portfolio__link">
+          <i class="ri-external-link-line"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio__project {
+    position: relative;
+    justify-self: center;
+    width: 100%;
+    max-width: 35rem;
+    border-radius: var(--b-radius);
+    overflow: hidden;
+  }
+
+  .portfolio__img {
+    transition: var(--transition);
+  }
+
+  .portfolio__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2rem;
+    margin: auto;
+    background-color: var(--color-white);
+    border-radius: var(--b-radius-lg);
+    transition: var(--transition);
+  }
+
+  .portfolio__name {
+    font-size: var(--fs-lg);
+  }
+
+  .portfolio__category {
+    font-size: var(--fs-sm);
+  }
+
+  .portfolio__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+
+  .portfolio__link:hover {
+    background-color: var(--color-dark);
+  }
+
+  .portfolio__project:hover .portfolio__img {
+    transform: scale(1.3);
+  }
+
+  .portfolio__project:hover .portfolio__content {
+    bottom: 2rem;
+  }
+</style>

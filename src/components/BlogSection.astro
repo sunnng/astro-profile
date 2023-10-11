@@ -1,0 +1,136 @@
+---
+import BlogImg1 from "../assets/imgs/blog1.jpg";
+import BlogImg2 from "../assets/imgs/blog2.jpg";
+import BlogImg3 from "../assets/imgs/blog3.jpg";
+---
+
+<section id="blog" class="section blog">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Articles & News</h2>
+      <p class="section__description">
+        Enim adipiscing duis facilisi sed eu tortor. Suspendisse vulputate
+        varius eu sollicitudin amet placerat feugiat sem felis.
+      </p>
+    </div>
+  </div>
+
+  <div class="d-grid blog__wrapper container">
+    <!-- =============== blog 1 =============== -->
+    <div class="blog__card">
+      <div class="blog__img-wrapper">
+        <img src={BlogImg1.src} alt="" class="blog__img" />
+      </div>
+
+      <div class="blog__content">
+        <h3 class="blog__title">How to become a Web Developer in 2023</h3>
+        <p class="blog__description">
+          Imperdiet aliquet fusce rhoncus est praesent sed ut magna. Gravida dui
+          nulla cursus pharetra fermentum
+        </p>
+      </div>
+
+      <div class="blog__footer">
+        <span class="blog__category">Web Development</span>
+        <span class="blog__date">February 15, 2023</span>
+      </div>
+    </div>
+
+    <!-- =============== blog 2 =============== -->
+    <div class="blog__card">
+      <div class="blog__img-wrapper">
+        <img src={BlogImg2.src} alt="" class="blog__img" />
+      </div>
+
+      <div class="blog__content">
+        <h3 class="blog__title">How to become a Web Developer in 2023</h3>
+        <p class="blog__description">
+          Imperdiet aliquet fusce rhoncus est praesent sed ut magna. Gravida dui
+          nulla cursus pharetra fermentum
+        </p>
+      </div>
+
+      <div class="blog__footer">
+        <span class="blog__category">Web Development</span>
+        <span class="blog__date">February 15, 2023</span>
+      </div>
+    </div>
+
+    <!-- =============== blog 3 =============== -->
+    <div class="blog__card">
+      <div class="blog__img-wrapper">
+        <img src={BlogImg3.src} alt="" class="blog__img" />
+      </div>
+
+      <div class="blog__content">
+        <h3 class="blog__title">How to become a Web Developer in 2023</h3>
+        <p class="blog__description">
+          Imperdiet aliquet fusce rhoncus est praesent sed ut magna. Gravida dui
+          nulla cursus pharetra fermentum
+        </p>
+      </div>
+
+      <div class="blog__footer">
+        <span class="blog__category">Web Development</span>
+        <span class="blog__date">February 15, 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog__card {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--b-radius);
+    overflow: hidden;
+    width: 100%;
+    max-width: 30rem;
+    justify-self: center;
+  }
+
+  .blog__img-wrapper {
+    overflow: hidden;
+  }
+
+  .blog__img {
+    transition: var(--transition);
+  }
+
+  .blog__content,
+  .blog__footer {
+    padding: 2rem;
+  }
+
+  .blog__title {
+    margin-bottom: 2rem;
+    font-size: var(--fs-lg);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .blog__title:hover {
+    color: var(--color-primary);
+  }
+
+  .blog__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .blog__category,
+  .blog__date {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+  }
+
+  .blog__category {
+    background-color: var(--color-gray);
+    padding: 0.5rem 1rem;
+  }
+
+  .blog__card:hover .blog__img {
+    transform: scale(1.3);
+  }
+</style>

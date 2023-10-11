@@ -1,0 +1,46 @@
+---
+import AboutImg from "../assets/imgs/about.jpg";
+---
+
+<section id="about" class="section about">
+  <div class="d-grid about__wrapper container">
+    <div class="about__content">
+      <h2 class="about__title">About Me</h2>
+      <p class="about__description">
+        Eu eget sed justo aliquam placerat aliquam vel tellus adipiscing.
+        Pellentesque vulputate lobortis in enim platea et massa viverra id.
+        Lorem nisl magnis velit leo purus rutrum sagittis id. Id ut dolor
+        malesuada dignissim diam ultrices ut dui. Erat integer eu convallis amet
+        arcu integer pulvinar. Arcu eu augue diam lectus etiam sit. Suspendisse
+        diam turpis diam arcu suspendisse blandit. Non tellus malesuada in justo
+        at ornare quisque.
+      </p>
+      <a href="#" class="btn btn--primary">My Resume</a>
+    </div>
+
+    <img src={AboutImg.src} alt="" class="about__img" />
+  </div>
+</section>
+
+<style>
+  .about__wrapper {
+    justify-items: center;
+  }
+
+  .about__content {
+    text-align: center;
+  }
+
+  .about__title {
+    margin-bottom: 2rem;
+    font-size: var(--fs-2xl);
+  }
+
+  .about__description {
+    margin-bottom: 5rem;
+  }
+
+  .about__img {
+    border-radius: var(--b-radius);
+  }
+</style>

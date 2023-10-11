@@ -1,0 +1,213 @@
+<script>
+  const header = document.getElementById("header"),
+    navMenu = document.getElementById("nav-menu"),
+    navOpen = document.getElementById("nav-open"),
+    navClose = document.getElementById("nav-close"),
+    navLinks = document.querySelectorAll(".nav__link");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      header?.classList.add("header--scroll");
+    } else {
+      header?.classList.remove("header--scroll");
+    }
+  });
+
+  navOpen?.addEventListener("click", () => {
+    navMenu?.classList.add("nav__menu--open");
+  });
+
+  navClose?.addEventListener("click", () => {
+    navMenu?.classList.remove("nav__menu--open");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu?.classList.remove("nav__menu--open");
+    });
+  });
+
+  function addActiveLink() {
+    const section = document.querySelectorAll("section[id]");
+    section.forEach((section) => {
+      const scrollY = window.scrollY;
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        document
+          .querySelector(".nav__link[href*=" + sectionId + "]")
+          ?.classList.add("nav__link--active");
+      } else {
+        document
+          .querySelector(".nav__link[href*=" + sectionId + "]")
+          ?.classList.remove("nav__link--active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", addActiveLink);
+</script>
+
+<header id="header" class="header">
+  <nav class="nav container">
+    <a href="#" class="nav__brand">Arthur</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#services" class="nav__link">Services</a>
+        </li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link">Skills</a>
+        </li>
+        <li class="nav__item">
+          <a href="#experience" class="nav__link">Experience</a>
+        </li>
+        <li class="nav__item">
+          <a href="#portfolio" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+        <li class="nav__item">
+          <a href="#contact" class="btn btn--primary">Contact</a>
+        </li>
+      </ul>
+
+      <span class="nav__close">
+        <i id="nav-close" class="ri-close-line"></i>
+      </span>
+    </div>
+
+    <span class="nav__open">
+      <i id="nav-open" class="ri-menu-3-line"></i>
+    </span>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--height-header);
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    z-index: var(--zindex-menu);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav__brand {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--color-white);
+  }
+
+  .nav__open,
+  .nav__close {
+    font-size: var(--fs-xl);
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+  .nav__open {
+    color: var(--color-white);
+  }
+
+  .nav__close {
+    color: var(--color-dark);
+  }
+
+  .nav__open:hover,
+  .nav__close:hover {
+    color: var(--color-primary);
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .nav__link {
+    color: var(--color-white);
+    transition: var(--transition);
+  }
+
+  .nav__link:hover,
+  .nav__link--active {
+    color: var(--color-primary);
+  }
+
+  @media screen and (max-width: 967px) {
+    .nav__menu {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem;
+      background-color: var(--color-white);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .nav__menu--open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav__link {
+      color: var(--color-title);
+    }
+
+    .nav__close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 967px) {
+    .nav__list {
+      flex-direction: initial;
+    }
+
+    .nav__open,
+    .nav__close {
+      display: none;
+    }
+  }
+
+  .header--scroll {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-header);
+  }
+
+  /* .header--scroll .nav__menu {
+    background-color: var(--color-white);
+  } */
+
+  .header--scroll :is(.nav__brand, .nav__link, .nav__open) {
+    color: var(--color-dark);
+  }
+
+  .header--scroll .nav__link--active {
+    color: var(--color-primary);
+  }
+</style>
